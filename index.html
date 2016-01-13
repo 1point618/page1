@@ -4,16 +4,21 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
 
-  <ul class="post-list">
-    {% for page in site.page %}
-      {% if page.index == true %}
-        {{ content }}
-      {% endif %}
-    {% endfor %}
-  </ul>
+{% for page in site.page %}
+  {% if page.index == true %}  
+  <div class="post">
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <header class="post-header">
+      <h1 class="post-title">Welcome home!</h1>
+    </header>
+
+    <article class="post-content">
+      {{ content }}
+    </article>
+
+  </div>
+  {% endif %}
+{% endfor %}
 
 </div>

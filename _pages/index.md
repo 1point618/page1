@@ -1,6 +1,5 @@
 ---
 index: true
-layout: page
 permalink: /index/
 ---
 
